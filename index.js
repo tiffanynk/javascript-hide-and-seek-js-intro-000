@@ -17,3 +17,14 @@ function increaseRankBy(n) {
     }
   }
 }
+
+function deepestChild() {
+  let node = document.getElementById('grand-node');
+  let nextN = node.children[0];
+
+  while (nextN) {
+    node = nextN;
+    nextN = node.children[0];
+  }
+  return node;
+}
